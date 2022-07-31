@@ -13,8 +13,8 @@ class AppTestCase(unittest.TestCase):
 
     def test_home(self):
         response = self.client.get("/")
-#        assert response.status_code == 200
-        assert "Hello, World!" == response.get_data(as_text=True)
+        assert response.status_code == 200
+        assert response.get_data(as_text=True) == "Hello, World!"
 
 if __name__ == "__main__":
     unittest.main()
