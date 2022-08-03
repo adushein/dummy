@@ -102,7 +102,7 @@ yc iam service-account create cicd-builder
 * Назначаем роль для сервисного аккаунта с правом на push
 
 ```
-yc container registry add-access-binding --name cicd \
+yc container registry add-access-binding --name cicd-builder \
   --service-account-name cicd-builder \
   --role container-registry.images.pusher
 ```
@@ -162,8 +162,6 @@ helm install gitlab-runner gitlab/gitlab-runner \
 
 * Убедитесь, что появился новый раннер в разделе Settings -> CI/CD -> Runners -> Specific runners
 
-
-![](../img/gitlab4.png)
 
 ## Подготовка переменных для CI
 
